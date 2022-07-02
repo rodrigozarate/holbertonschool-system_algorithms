@@ -19,7 +19,7 @@ rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color)
 		newnode->color = color;
 		newnode->parent = parent;
 		newnode->left = NULL;
-		newnode->righht = NULL;
+		newnode->right = NULL;
 	}
 	else
 	{
