@@ -6,6 +6,7 @@
  *
  * @RED: 0 -> Red node
  * @BLACK: 1 -> Black node
+ * @DOUBLE_BLACK: 2 -> Null
  */
 typedef enum rb_color_e
 {
@@ -33,5 +34,6 @@ typedef struct rb_tree_s
 } rb_tree_t;
 
 rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color);
+int rb_tree_is_valid(const rb_tree_t *tree);
 
 #endif /* _RB_TREE_H_ */
