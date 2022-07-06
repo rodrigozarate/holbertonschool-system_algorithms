@@ -1,6 +1,8 @@
 #ifndef _RB_TREE_H_
 #define _RB_TREE_H_
 
+#include <stddef.h>
+
 /**
  * enum rb_color_e - Possible color of a Red-Black tree
  *
@@ -34,6 +36,12 @@ typedef struct rb_tree_s
 } rb_tree_t;
 
 rb_tree_t *rb_tree_node(rb_tree_t *parent, int value, rb_color_t color);
+
+size_t BiggerSizeT(size_t w, size_t h);
+size_t TreeHeight(const rb_tree_t *tree);
+int ColorTest(const rb_tree_t *tree);
+int BinarySearchTree(const rb_tree_t *tree, int *node);
+
 int rb_tree_is_valid(const rb_tree_t *tree);
 
 #endif /* _RB_TREE_H_ */
