@@ -61,6 +61,8 @@ int ColorTest(const rb_tree_t *tree)
 		return (ColorTest(tree->left) &&
 				ColorTest(tree->right));
 	}
+
+	return (1);
 }
 
 /**
@@ -101,5 +103,5 @@ int rb_tree_is_valid(const rb_tree_t *tree)
 	if (!BinarySearchTree(tree, &node))
 		return (0);
 
-	return (RedBlackColor(tree));
+	return (ColorTest(tree));
 }
