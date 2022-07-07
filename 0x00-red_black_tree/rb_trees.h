@@ -3,6 +3,8 @@
 
 #include <stddef.h>
 
+#define IS_RED(node)	(node != NULL && node->color == RED)
+
 /**
  * enum rb_color_e - Possible color of a Red-Black tree
  *
@@ -52,5 +54,16 @@ rb_tree_t *rb_tree_insert_recurse(rb_tree_t *tree, int value);
 rb_tree_t *rb_tree_insert(rb_tree_t **tree, int value);
 
 rb_tree_t *array_to_rb_tree(int *array, size_t size);
+
+rb_tree_t *rb_tree_remove(rb_tree_t *root, int n);
+rb_tree_t *rb_tree_remove_r(rb_tree_t *root, int n, int *done);
+int remove_recurse_direction_helper(rb_tree_t *root, int n, int *done);
+rb_tree_t *rb_rebalance(rb_tree_t *root, int direction, int *done);
+void rebalance_red_siblings(
+int direction, rb_tree_t *p, rb_tree_t *s, rb_tree_t *root, int *done);
+
+rb_tree_t *single_rotation(rb_tree_t *root, int direction);
+rb_tree_t *double_rotation(rb_tree_t *root, int direction);
+int is_red(rb_tree_t *node);
 
 #endif /* _RB_TREE_H_ */
