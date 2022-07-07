@@ -4,7 +4,7 @@
 /**
  * rb_tree_get_uncle - retrieves sibling
  * @n: starting node
- * Return: pointer 
+ * Return: pointer
  */
 rb_tree_t *rb_tree_get_uncle(rb_tree_t *n)
 {
@@ -223,7 +223,7 @@ rb_tree_t *rb_tree_insert(rb_tree_t **tree, int value)
 		new = rb_tree_insert_recurse(NULL, value);
 	else
 		new = rb_tree_insert_recurse(*tree, value);
-		
+
 	if (!new)
 		return (NULL);
 
