@@ -28,7 +28,7 @@ rb_tree_t *rb_tree_remove(rb_tree_t *root, int n)
 rb_tree_t *rb_tree_remove_r(rb_tree_t *root, int n, int *flag)
 {
 	int direction;
-	rb_tree_t *save;
+	rb_tree_t *save = NULL;
 
 	if (root == NULL)
 		*flag = 1;

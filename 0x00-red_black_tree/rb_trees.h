@@ -2,6 +2,7 @@
 #define _RB_TREE_H_
 
 #include <stddef.h>
+#include <stdlib.h>
 
 #define IS_RED(node)	(node != NULL && node->color == RED)
 
