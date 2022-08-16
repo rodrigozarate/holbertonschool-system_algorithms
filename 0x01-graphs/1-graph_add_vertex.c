@@ -16,12 +16,10 @@ vertex_t *graph_add_vertex(graph_t *graph, const char *str)
 
 	if (graph == NULL || str == NULL)
 		return (NULL);
-
 	for (i = 0, temp = graph->vertices; i < graph->nb_vertices; i++)
 	{
 		if (!temp || strcmp(temp->content, str) == 0)
 			return (NULL);
-		
 		if (i == graph->nb_vertices - 1 && !temp->next)
 			tail = temp;
 		temp = temp->next;
@@ -30,7 +28,6 @@ vertex_t *graph_add_vertex(graph_t *graph, const char *str)
 	new = malloc(sizeof(vertex_t));
 	if (!new)
 		return (NULL);
-	
 	str_len = strlen(str);
 	str_cpy = malloc(sizeof(char) * str_len + 1);
 	if (!str_cpy)
@@ -44,7 +41,6 @@ vertex_t *graph_add_vertex(graph_t *graph, const char *str)
 	new->nb_edges = 0;
 	new->edges    = NULL;
 	new->next     = NULL;
-	/* set vertex as tail of adjacency list, or head if none exists */
 	if (tail)
 		tail->next = new;
 	else
