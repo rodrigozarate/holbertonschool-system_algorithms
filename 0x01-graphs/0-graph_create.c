@@ -7,10 +7,10 @@
  */
 graph_t *graph_create(void)
 {
-	graph_t *graph =NULL;
+	graph_t *graph = NULL;
 
 	graph = malloc(sizeof(graph_t));
-	if(!graph)
+	if (!graph)
 		return (NULL);
 
 	graph->nb_vertices = 0;
