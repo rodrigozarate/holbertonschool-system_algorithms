@@ -33,7 +33,30 @@ typedef struct heap_s
 	binary_tree_node_t *root;
 } heap_t;
 
+/**
+ * struct binary_tree_node_queue_s - Bynari structure
+ * @node: node
+ * @next: pointer
+ */
+typedef struct binary_tree_node_queue_s
+{
+	binary_tree_node_t *node;
+	struct binary_tree_node_queue_s *next;
+} bt_node_queue_t;
+
 heap_t *heap_create(int (*data_cmp)(void *, void *));
 binary_tree_node_t *binary_tree_node(binary_tree_node_t *parent, void *data);
+
+
+bt_node_queue_t *BTQP(bt_node_queue_t **queue, binary_tree_node_t *node);
+void BTQA(bt_node_queue_t **queue);
+void BTQC(bt_node_queue_t **queue);
+binary_tree_node_t *BTCI(binary_tree_node_t *root, void *data);
+binary_tree_node_t *minHSU(binary_tree_node_t *new,
+							int (data_cmp)(void *, void *));
+binary_tree_node_t *hI(binary_tree_node_t **root,
+						int (data_cmp)(void *, void *), void *data);
+binary_tree_node_t *heap_insert(heap_t *heap, void *data);
+
 
 #endif
