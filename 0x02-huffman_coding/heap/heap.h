@@ -58,5 +58,12 @@ binary_tree_node_t *hI(binary_tree_node_t **root,
 						int (data_cmp)(void *, void *), void *data);
 binary_tree_node_t *heap_insert(heap_t *heap, void *data);
 
+void *heap_extract(heap_t *heap);
+void *hE(binary_tree_node_t **root, int (data_cmp)(void *, void *));
+void minHSD(binary_tree_node_t *root, int (data_cmp)(void *, void *));
+binary_tree_node_t *lILO(binary_tree_node_t *root);
+int bTIC(const binary_tree_node_t *tree, size_t node_i, size_t tree_sz);
+size_t bTS(const binary_tree_node_t *tree);
+
 
 #endif
