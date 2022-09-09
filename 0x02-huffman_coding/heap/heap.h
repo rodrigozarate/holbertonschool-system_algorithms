@@ -65,5 +65,7 @@ binary_tree_node_t *lILO(binary_tree_node_t *root);
 int bTIC(const binary_tree_node_t *tree, size_t node_i, size_t tree_sz);
 size_t bTS(const binary_tree_node_t *tree);
 
+void bTD(binary_tree_node_t *tree, void (*free_data)(void *));
+void heap_delete(heap_t *heap, void (*free_data)(void *);
 
 #endif
