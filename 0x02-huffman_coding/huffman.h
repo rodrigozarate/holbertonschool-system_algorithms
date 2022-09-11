@@ -22,5 +22,6 @@ int nSymComp(void *s1, void *s2);
 int huffman_extract_and_insert(heap_t *priority_queue);
 binary_tree_node_t *hSN(binary_tree_node_t *ex_node1,
 						binary_tree_node_t *ex_node2);
+binary_tree_node_t *huffman_tree(char *data, size_t *freq, size_t size);
 
 #endif
