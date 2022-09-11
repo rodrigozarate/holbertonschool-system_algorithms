@@ -1,4 +1,5 @@
 #include "huffman.h"
+#include <stdlib.h>
 
 /**
  * nSymComp - compare nested symbols
@@ -53,7 +54,8 @@ void fNestNd(void *data)
  * @size: array size
  * Return: pointer
  */
-heap_t *huffman_priority_queue(char *data, size_t *freq, size_t size){
+heap_t *huffman_priority_queue(char *data, size_t *freq, size_t size)
+{
 	binary_tree_node_t *nn_node = NULL, *prio_que_node = NULL;
 	heap_t *priority_queue = NULL;
 	symbol_t *symbol = NULL;
