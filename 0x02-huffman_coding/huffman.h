@@ -17,5 +17,7 @@ typedef struct symbol_s
 
 symbol_t *symbol_create(char data, size_t freq);
 heap_t *huffman_priority_queue(char *data, size_t *freq, size_t size);
+void fNestNd(void *data);
+int nSymComp(void *s1, void *s2);
 
 #endif
