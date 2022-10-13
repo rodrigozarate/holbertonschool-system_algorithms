@@ -16,10 +16,26 @@ typedef struct point_s
 	int y;
 } point_t;
 
+/**
+ * struct dijkstra_vertex_s - dijkstra vertex struct
+ * @vertex: vertex
+ * @cmlW: weight
+ * @paht_: path_vTX
+ */
+typedef struct dijkstra_vertex_s
+{
+	vertex_t *vertex;
+	size_t cmlW;
+	vertex_t *path_vTX;
+} dijkstra_vertex_t;
+
 queue_t *backtracking_array(char **map, int rows, int cols,
 			    point_t const *start, point_t const *target);
 
 queue_t *backtracking_graph(graph_t *graph, vertex_t const *start,
 			    vertex_t const *target);
+
+queue_t *dijkstra_graph(graph_t *graph, vertex_t const *start,
+			vertex_t const *target);
 
 #endif /* HOLBI_PATHFINDING */
