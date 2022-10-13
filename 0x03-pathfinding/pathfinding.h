@@ -20,7 +20,7 @@ typedef struct point_s
  * struct dijkstra_vertex_s - dijkstra vertex struct
  * @vertex: vertex
  * @cmlW: weight
- * @paht_: path_vTX
+ * @path_vTX: verified path vertex
  */
 typedef struct dijkstra_vertex_s
 {
