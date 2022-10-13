@@ -2,6 +2,7 @@
 #define HOLBI_PATHFINDING
 
 #include "queues.h"
+#include "graphs.h"
 
 /**
  * struct point_s - X Y coordinates
