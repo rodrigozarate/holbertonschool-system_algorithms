@@ -31,5 +31,8 @@ size_t nary_tree_search(nary_tree_t const *root,
 			size_t _depth);
 size_t nary_tree_diameter(nary_tree_t const *root);
 size_t find_diameter(nary_tree_t const *root, size_t depth, size_t *diameter);
+int path_exists(nary_tree_t const *root, char const * const *path);
+int check_path(nary_tree_t const *root, char const * const *path, size_t pidx);
+
 
 #endif /* NARY_TREES_H */
