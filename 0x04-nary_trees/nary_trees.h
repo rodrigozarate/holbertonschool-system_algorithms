@@ -29,5 +29,7 @@ size_t nary_tree_traverse(nary_tree_t const *root,
 size_t nary_tree_search(nary_tree_t const *root,
 			void (*action)(nary_tree_t const *node, size_t depth),
 			size_t _depth);
+size_t nary_tree_diameter(nary_tree_t const *root);
+size_t find_diameter(nary_tree_t const *root, size_t depth, size_t *diameter);
 
 #endif /* NARY_TREES_H */
